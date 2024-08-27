@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "album-manager-googlephotos"
+version = "0.1.0"
+description = "Sync albums based on local folder structure"
+authors = ["Jure Grom"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "album_manager_googlephotos"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+google-api-python-client = "^2.141.0"
+google-auth-oauthlib = "^1.2.1"
+requests = "^2.32.3"
+
+[tool.poetry.scripts]
+push_local = "album_manager_googlephotos.push_local_structure_to_googlephotos:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
